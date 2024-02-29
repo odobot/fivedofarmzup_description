@@ -1,439 +1,525 @@
 <?xml version="1.0" ?>
-<robot name="fivedofarmzup" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<robot name="fivedofarmzup"
+  xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-<xacro:include filename="$(find fivedofarmzup_description)/urdf/materials.xacro" />
-<xacro:include filename="$(find fivedofarmzup_description)/urdf/fivedofarmzup.trans" />
-<link name="base_link">
-  <inertial>
-    <origin xyz="0.008256875926432835 -0.011105592914853562 0.011486765447576857" rpy="0 0 0"/>
-    <mass value="0.1384997032843435"/>
-    <inertia ixx="4.6e-05" iyy="0.000113" izz="0.000116" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
-  </inertial>
-  <visual>
-    <origin xyz="0 0 0" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="package://fivedofarmzup_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="steel_satin"/>
-  </visual>
-  <collision>
-    <origin xyz="0 0 0" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="package://fivedofarmzup_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
+  <xacro:include filename="$(find fivedofarmzup_description)/urdf/materials.xacro" />
+  <xacro:include filename="$(find fivedofarmzup_description)/urdf/fivedofarmzup.trans" />
+  <link name="base_link">
+    <inertial>
+      <origin xyz="0.008256875926432835 -0.011105592914853562 0.011486765447576857" rpy="0 0 0"/>
+      <mass value="0.1384997032843435"/>
+      <inertia ixx="4.6e-05" iyy="0.000113" izz="0.000116" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://fivedofarmzup_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="steel_satin"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://fivedofarmzup_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
 
-<link name="Servo_Bracket_-_U_Shaped_Defaut_v1_1">
-  <inertial>
-    <origin xyz="0.009499875926498334 0.007075951002761895 0.014917192812203866" rpy="0 0 0"/>
-    <mass value="0.04341034449852496"/>
-    <inertia ixx="1.1e-05" iyy="1.8e-05" izz="1.4e-05" ixy="-0.0" iyz="-2e-06" ixz="-0.0"/>
-  </inertial>
-  <visual>
-    <origin xyz="-0.008257 0.025556 -0.025987" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="package://fivedofarmzup_description/meshes/Servo_Bracket_-_U_Shaped_Defaut_v1_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="steel_satin"/>
-  </visual>
-  <collision>
-    <origin xyz="-0.008257 0.025556 -0.025987" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="package://fivedofarmzup_description/meshes/Servo_Bracket_-_U_Shaped_Defaut_v1_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
+  <link name="Servo_Bracket_-_U_Shaped_Defaut_v1_1">
+    <inertial>
+      <origin xyz="0.009499875926498334 0.007075951002761895 0.014917192812203866" rpy="0 0 0"/>
+      <mass value="0.04341034449852496"/>
+      <inertia ixx="1.1e-05" iyy="1.8e-05" izz="1.4e-05" ixy="-0.0" iyz="-2e-06" ixz="-0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.008257 0.025556 -0.025987" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://fivedofarmzup_description/meshes/Servo_Bracket_-_U_Shaped_Defaut_v1_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="steel_satin"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.008257 0.025556 -0.025987" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://fivedofarmzup_description/meshes/Servo_Bracket_-_U_Shaped_Defaut_v1_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
 
-<link name="Standard_Servo__1501MG__v2_1">
-  <inertial>
-    <origin xyz="-0.024617560067736483 0.0051746413740680584 -0.007685743113773125" rpy="0 0 0"/>
-    <mass value="0.23944927912351072"/>
-    <inertia ixx="3.7e-05" iyy="6.3e-05" izz="4.1e-05" ixy="0.0" iyz="0.0" ixz="-2e-06"/>
-  </inertial>
-  <visual>
-    <origin xyz="-0.042757 0.030556 -0.058487" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="package://fivedofarmzup_description/meshes/Standard_Servo__1501MG__v2_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="steel_satin"/>
-  </visual>
-  <collision>
-    <origin xyz="-0.042757 0.030556 -0.058487" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="package://fivedofarmzup_description/meshes/Standard_Servo__1501MG__v2_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
+  <link name="Standard_Servo__1501MG__v2_1">
+    <inertial>
+      <origin xyz="-0.024617560067736483 0.0051746413740680584 -0.007685743113773125" rpy="0 0 0"/>
+      <mass value="0.23944927912351072"/>
+      <inertia ixx="3.7e-05" iyy="6.3e-05" izz="4.1e-05" ixy="0.0" iyz="0.0" ixz="-2e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.042757 0.030556 -0.058487" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://fivedofarmzup_description/meshes/Standard_Servo__1501MG__v2_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="steel_satin"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.042757 0.030556 -0.058487" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://fivedofarmzup_description/meshes/Standard_Servo__1501MG__v2_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
 
-<link name="Servo_Bracket_-_U_Shaped_Defaut_v1_2">
-  <inertial>
-    <origin xyz="-0.008965167087897054 0.006515116795615745 0.007423455818892699" rpy="0 0 0"/>
-    <mass value="0.04341034449852496"/>
-    <inertia ixx="1.3e-05" iyy="1.2e-05" izz="1.8e-05" ixy="-2e-06" iyz="-1e-06" ixz="1e-06"/>
-  </inertial>
-  <visual>
-    <origin xyz="-0.027957 0.025381 -0.075787" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="package://fivedofarmzup_description/meshes/Servo_Bracket_-_U_Shaped_Defaut_v1_2.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="steel_satin"/>
-  </visual>
-  <collision>
-    <origin xyz="-0.027957 0.025381 -0.075787" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="package://fivedofarmzup_description/meshes/Servo_Bracket_-_U_Shaped_Defaut_v1_2.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
+  <link name="Servo_Bracket_-_U_Shaped_Defaut_v1_2">
+    <inertial>
+      <origin xyz="-0.008965167087897054 0.006515116795615745 0.007423455818892699" rpy="0 0 0"/>
+      <mass value="0.04341034449852496"/>
+      <inertia ixx="1.3e-05" iyy="1.2e-05" izz="1.8e-05" ixy="-2e-06" iyz="-1e-06" ixz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.027957 0.025381 -0.075787" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://fivedofarmzup_description/meshes/Servo_Bracket_-_U_Shaped_Defaut_v1_2.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="steel_satin"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.027957 0.025381 -0.075787" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://fivedofarmzup_description/meshes/Servo_Bracket_-_U_Shaped_Defaut_v1_2.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
 
-<link name="Standard_Servo__1501MG__v2_2">
-  <inertial>
-    <origin xyz="-0.020690208941470747 -0.015395926723511004 -0.005175234552414004" rpy="0 0 0"/>
-    <mass value="0.23944927912351072"/>
-    <inertia ixx="3.8e-05" iyy="4e-05" izz="6.3e-05" ixy="-2e-06" iyz="0.0" ixz="0.0"/>
-  </inertial>
-  <visual>
-    <origin xyz="-0.047913 0.008979 -0.095287" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="package://fivedofarmzup_description/meshes/Standard_Servo__1501MG__v2_2.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="steel_satin"/>
-  </visual>
-  <collision>
-    <origin xyz="-0.047913 0.008979 -0.095287" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="package://fivedofarmzup_description/meshes/Standard_Servo__1501MG__v2_2.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
+  <link name="Standard_Servo__1501MG__v2_2">
+    <inertial>
+      <origin xyz="-0.020690208941470747 -0.015395926723511004 -0.005175234552414004" rpy="0 0 0"/>
+      <mass value="0.23944927912351072"/>
+      <inertia ixx="3.8e-05" iyy="4e-05" izz="6.3e-05" ixy="-2e-06" iyz="0.0" ixz="0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.047913 0.008979 -0.095287" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://fivedofarmzup_description/meshes/Standard_Servo__1501MG__v2_2.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="steel_satin"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.047913 0.008979 -0.095287" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://fivedofarmzup_description/meshes/Standard_Servo__1501MG__v2_2.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
 
-<link name="Servo_Bracket_-_U_Shaped_bis_Defaut_v1_1">
-  <inertial>
-    <origin xyz="-0.02103195136733882 0.015285710216863195 0.030870482183262105" rpy="0 0 0"/>
-    <mass value="0.06468278379887461"/>
-    <inertia ixx="4.2e-05" iyy="5.2e-05" izz="4.1e-05" ixy="1.6e-05" iyz="-0.0" ixz="0.0"/>
-  </inertial>
-  <visual>
-    <origin xyz="-0.053044 0.031005 -0.090112" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="package://fivedofarmzup_description/meshes/Servo_Bracket_-_U_Shaped_bis_Defaut_v1_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="steel_satin"/>
-  </visual>
-  <collision>
-    <origin xyz="-0.053044 0.031005 -0.090112" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="package://fivedofarmzup_description/meshes/Servo_Bracket_-_U_Shaped_bis_Defaut_v1_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
+  <link name="Servo_Bracket_-_U_Shaped_bis_Defaut_v1_1">
+    <inertial>
+      <origin xyz="-0.02103195136733882 0.015285710216863195 0.030870482183262105" rpy="0 0 0"/>
+      <mass value="0.06468278379887461"/>
+      <inertia ixx="4.2e-05" iyy="5.2e-05" izz="4.1e-05" ixy="1.6e-05" iyz="-0.0" ixz="0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.053044 0.031005 -0.090112" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://fivedofarmzup_description/meshes/Servo_Bracket_-_U_Shaped_bis_Defaut_v1_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="steel_satin"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.053044 0.031005 -0.090112" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://fivedofarmzup_description/meshes/Servo_Bracket_-_U_Shaped_bis_Defaut_v1_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
 
-<link name="U_Bracket_Defaut_v1_1">
-  <inertial>
-    <origin xyz="4.863267648314018e-08 -2.897831404384543e-07 0.011918896080253927" rpy="0 0 0"/>
-    <mass value="0.04536490633383511"/>
-    <inertia ixx="1.7e-05" iyy="2.4e-05" izz="2.6e-05" ixy="1e-05" iyz="0.0" ixz="0.0"/>
-  </inertial>
-  <visual>
-    <origin xyz="-0.032012 0.015719 -0.143112" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="package://fivedofarmzup_description/meshes/U_Bracket_Defaut_v1_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="steel_satin"/>
-  </visual>
-  <collision>
-    <origin xyz="-0.032012 0.015719 -0.143112" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="package://fivedofarmzup_description/meshes/U_Bracket_Defaut_v1_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
+  <link name="U_Bracket_Defaut_v1_1">
+    <inertial>
+      <origin xyz="4.863267648314018e-08 -2.897831404384543e-07 0.011918896080253927" rpy="0 0 0"/>
+      <mass value="0.04536490633383511"/>
+      <inertia ixx="1.7e-05" iyy="2.4e-05" izz="2.6e-05" ixy="1e-05" iyz="0.0" ixz="0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.032012 0.015719 -0.143112" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://fivedofarmzup_description/meshes/U_Bracket_Defaut_v1_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="steel_satin"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.032012 0.015719 -0.143112" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://fivedofarmzup_description/meshes/U_Bracket_Defaut_v1_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
 
-<link name="Standard_Servo__1501MG__v2_3">
-  <inertial>
-    <origin xyz="-0.02145824466800232 0.012973536221972538 0.009585346693335578" rpy="0 0 0"/>
-    <mass value="0.23944927912351072"/>
-    <inertia ixx="4.8e-05" iyy="5.5e-05" izz="3.8e-05" ixy="1e-05" iyz="3e-06" ixz="4e-06"/>
-  </inertial>
-  <visual>
-    <origin xyz="-0.053044 0.031005 -0.173112" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="package://fivedofarmzup_description/meshes/Standard_Servo__1501MG__v2_3.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="steel_satin"/>
-  </visual>
-  <collision>
-    <origin xyz="-0.053044 0.031005 -0.173112" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="package://fivedofarmzup_description/meshes/Standard_Servo__1501MG__v2_3.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
+  <link name="Standard_Servo__1501MG__v2_3">
+    <inertial>
+      <origin xyz="-0.02145824466800232 0.012973536221972538 0.009585346693335578" rpy="0 0 0"/>
+      <mass value="0.23944927912351072"/>
+      <inertia ixx="4.8e-05" iyy="5.5e-05" izz="3.8e-05" ixy="1e-05" iyz="3e-06" ixz="4e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.053044 0.031005 -0.173112" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://fivedofarmzup_description/meshes/Standard_Servo__1501MG__v2_3.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="steel_satin"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.053044 0.031005 -0.173112" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://fivedofarmzup_description/meshes/Standard_Servo__1501MG__v2_3.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
 
-<link name="Servo_Bracket_-_Corner_Mount_Defaut_v1_1">
-  <inertial>
-    <origin xyz="-0.0041617855295247655 -0.005725933855100675 0.010830366515878181" rpy="0 0 0"/>
-    <mass value="0.018668931920070433"/>
-    <inertia ixx="3e-06" iyy="3e-06" izz="3e-06" ixy="-0.0" iyz="1e-06" ixz="1e-06"/>
-  </inertial>
-  <visual>
-    <origin xyz="-0.031497 0.003161 -0.196493" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="package://fivedofarmzup_description/meshes/Servo_Bracket_-_Corner_Mount_Defaut_v1_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="steel_satin"/>
-  </visual>
-  <collision>
-    <origin xyz="-0.031497 0.003161 -0.196493" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="package://fivedofarmzup_description/meshes/Servo_Bracket_-_Corner_Mount_Defaut_v1_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
+  <link name="Servo_Bracket_-_Corner_Mount_Defaut_v1_1">
+    <inertial>
+      <origin xyz="-0.0041617855295247655 -0.005725933855100675 0.010830366515878181" rpy="0 0 0"/>
+      <mass value="0.018668931920070433"/>
+      <inertia ixx="3e-06" iyy="3e-06" izz="3e-06" ixy="-0.0" iyz="1e-06" ixz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.031497 0.003161 -0.196493" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://fivedofarmzup_description/meshes/Servo_Bracket_-_Corner_Mount_Defaut_v1_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="steel_satin"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.031497 0.003161 -0.196493" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://fivedofarmzup_description/meshes/Servo_Bracket_-_Corner_Mount_Defaut_v1_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
 
-<link name="U_Bracket_Defaut_v1_2">
-  <inertial>
-    <origin xyz="-0.0015140184880517472 -0.0020826854169027353 0.011637615110598576" rpy="0 0 0"/>
-    <mass value="0.04536490633383511"/>
-    <inertia ixx="1.7e-05" iyy="2.3e-05" izz="2.6e-05" ixy="1e-05" iyz="1e-06" ixz="1e-06"/>
-  </inertial>
-  <visual>
-    <origin xyz="-0.02073 0.017976 -0.214461" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="package://fivedofarmzup_description/meshes/U_Bracket_Defaut_v1_2.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="steel_satin"/>
-  </visual>
-  <collision>
-    <origin xyz="-0.02073 0.017976 -0.214461" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="package://fivedofarmzup_description/meshes/U_Bracket_Defaut_v1_2.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
+  <link name="U_Bracket_Defaut_v1_2">
+    <inertial>
+      <origin xyz="-0.0015140184880517472 -0.0020826854169027353 0.011637615110598576" rpy="0 0 0"/>
+      <mass value="0.04536490633383511"/>
+      <inertia ixx="1.7e-05" iyy="2.3e-05" izz="2.6e-05" ixy="1e-05" iyz="1e-06" ixz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.02073 0.017976 -0.214461" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://fivedofarmzup_description/meshes/U_Bracket_Defaut_v1_2.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="steel_satin"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.02073 0.017976 -0.214461" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://fivedofarmzup_description/meshes/U_Bracket_Defaut_v1_2.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
 
-<link name="Standard_Servo__1501MG__v2_4">
-  <inertial>
-    <origin xyz="0.0188030780363182 -0.016287350989976787 0.00958605653086722" rpy="0 0 0"/>
-    <mass value="0.23944927912351072"/>
-    <inertia ixx="4.8e-05" iyy="5.4e-05" izz="3.8e-05" ixy="1e-05" iyz="5e-06" ixz="2e-06"/>
-  </inertial>
-  <visual>
-    <origin xyz="0.004113 0.007933 -0.243752" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="package://fivedofarmzup_description/meshes/Standard_Servo__1501MG__v2_4.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="steel_satin"/>
-  </visual>
-  <collision>
-    <origin xyz="0.004113 0.007933 -0.243752" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="package://fivedofarmzup_description/meshes/Standard_Servo__1501MG__v2_4.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
+  <link name="Standard_Servo__1501MG__v2_4">
+    <inertial>
+      <origin xyz="0.0188030780363182 -0.016287350989976787 0.00958605653086722" rpy="0 0 0"/>
+      <mass value="0.23944927912351072"/>
+      <inertia ixx="4.8e-05" iyy="5.4e-05" izz="3.8e-05" ixy="1e-05" iyz="5e-06" ixz="2e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.004113 0.007933 -0.243752" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://fivedofarmzup_description/meshes/Standard_Servo__1501MG__v2_4.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="steel_satin"/>
+    </visual>
+    <collision>
+      <origin xyz="0.004113 0.007933 -0.243752" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://fivedofarmzup_description/meshes/Standard_Servo__1501MG__v2_4.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
 
-<link name="Servo_Bracket_-_Corner_Mount_Defaut_v1_2">
-  <inertial>
-    <origin xyz="-0.004161821817511239 -0.005725949363095464 0.010830076353466334" rpy="0 0 0"/>
-    <mass value="0.018668931920070433"/>
-    <inertia ixx="3e-06" iyy="3e-06" izz="3e-06" ixy="-0.0" iyz="1e-06" ixz="1e-06"/>
-  </inertial>
-  <visual>
-    <origin xyz="-0.028862 0.019714 -0.267134" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="package://fivedofarmzup_description/meshes/Servo_Bracket_-_Corner_Mount_Defaut_v1_2.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="steel_satin"/>
-  </visual>
-  <collision>
-    <origin xyz="-0.028862 0.019714 -0.267134" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="package://fivedofarmzup_description/meshes/Servo_Bracket_-_Corner_Mount_Defaut_v1_2.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
+  <link name="Servo_Bracket_-_Corner_Mount_Defaut_v1_2">
+    <inertial>
+      <origin xyz="-0.004161821817511239 -0.005725949363095464 0.010830076353466334" rpy="0 0 0"/>
+      <mass value="0.018668931920070433"/>
+      <inertia ixx="3e-06" iyy="3e-06" izz="3e-06" ixy="-0.0" iyz="1e-06" ixz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.028862 0.019714 -0.267134" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://fivedofarmzup_description/meshes/Servo_Bracket_-_Corner_Mount_Defaut_v1_2.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="steel_satin"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.028862 0.019714 -0.267134" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://fivedofarmzup_description/meshes/Servo_Bracket_-_Corner_Mount_Defaut_v1_2.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
 
-<link name="Servo_Bracket_-_U_Shaped_Defaut_v1_5">
-  <inertial>
-    <origin xyz="0.0017280381973322559 -0.01378083991578289 0.013036009528027082" rpy="0 0 0"/>
-    <mass value="0.04341034449852496"/>
-    <inertia ixx="1.3e-05" iyy="1.5e-05" izz="1.5e-05" ixy="3e-06" iyz="2e-06" ixz="1e-06"/>
-  </inertial>
-  <visual>
-    <origin xyz="-0.018095 0.034529 -0.285102" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="package://fivedofarmzup_description/meshes/Servo_Bracket_-_U_Shaped_Defaut_v1_5.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="steel_satin"/>
-  </visual>
-  <collision>
-    <origin xyz="-0.018095 0.034529 -0.285102" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="package://fivedofarmzup_description/meshes/Servo_Bracket_-_U_Shaped_Defaut_v1_5.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
+  <link name="Servo_Bracket_-_U_Shaped_Defaut_v1_5">
+    <inertial>
+      <origin xyz="0.0017280381973322559 -0.01378083991578289 0.013036009528027082" rpy="0 0 0"/>
+      <mass value="0.04341034449852496"/>
+      <inertia ixx="1.3e-05" iyy="1.5e-05" izz="1.5e-05" ixy="3e-06" iyz="2e-06" ixz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.018095 0.034529 -0.285102" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://fivedofarmzup_description/meshes/Servo_Bracket_-_U_Shaped_Defaut_v1_5.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="steel_satin"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.018095 0.034529 -0.285102" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://fivedofarmzup_description/meshes/Servo_Bracket_-_U_Shaped_Defaut_v1_5.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
 
-<link name="Standard_Servo__1501MG__v2_5">
-  <inertial>
-    <origin xyz="0.017918988263733164 -0.017216754314859712 -0.008621667108157482" rpy="0 0 0"/>
-    <mass value="0.23944927912351072"/>
-    <inertia ixx="4.5e-05" iyy="5.3e-05" izz="4.2e-05" ixy="1.2e-05" iyz="3e-06" ixz="4e-06"/>
-  </inertial>
-  <visual>
-    <origin xyz="-0.004299 0.027147 -0.317914" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="package://fivedofarmzup_description/meshes/Standard_Servo__1501MG__v2_5.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="steel_satin"/>
-  </visual>
-  <collision>
-    <origin xyz="-0.004299 0.027147 -0.317914" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="package://fivedofarmzup_description/meshes/Standard_Servo__1501MG__v2_5.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
+  <link name="Standard_Servo__1501MG__v2_5">
+    <inertial>
+      <origin xyz="0.017918988263733164 -0.017216754314859712 -0.008621667108157482" rpy="0 0 0"/>
+      <mass value="0.23944927912351072"/>
+      <inertia ixx="4.5e-05" iyy="5.3e-05" izz="4.2e-05" ixy="1.2e-05" iyz="3e-06" ixz="4e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.004299 0.027147 -0.317914" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://fivedofarmzup_description/meshes/Standard_Servo__1501MG__v2_5.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="steel_satin"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.004299 0.027147 -0.317914" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://fivedofarmzup_description/meshes/Standard_Servo__1501MG__v2_5.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
 
-<link name="Servo_Bracket_-_U_Shaped_Defaut_v1_3">
-  <inertial>
-    <origin xyz="-0.016206497218868368 0.0076074713874090885 0.024858486220017628" rpy="0 0 0"/>
-    <mass value="0.04341034449852496"/>
-    <inertia ixx="1.4e-05" iyy="1.8e-05" izz="1.1e-05" ixy="1e-06" iyz="1e-06" ixz="1e-06"/>
-  </inertial>
-  <visual>
-    <origin xyz="-0.0439 0.01416 -0.159779" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="package://fivedofarmzup_description/meshes/Servo_Bracket_-_U_Shaped_Defaut_v1_3.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="steel_satin"/>
-  </visual>
-  <collision>
-    <origin xyz="-0.0439 0.01416 -0.159779" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="package://fivedofarmzup_description/meshes/Servo_Bracket_-_U_Shaped_Defaut_v1_3.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
+  <link name="Servo_Bracket_-_U_Shaped_Defaut_v1_3">
+    <inertial>
+      <origin xyz="-0.016206497218868368 0.0076074713874090885 0.024858486220017628" rpy="0 0 0"/>
+      <mass value="0.04341034449852496"/>
+      <inertia ixx="1.4e-05" iyy="1.8e-05" izz="1.1e-05" ixy="1e-06" iyz="1e-06" ixz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.0439 0.01416 -0.159779" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://fivedofarmzup_description/meshes/Servo_Bracket_-_U_Shaped_Defaut_v1_3.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="steel_satin"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.0439 0.01416 -0.159779" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://fivedofarmzup_description/meshes/Servo_Bracket_-_U_Shaped_Defaut_v1_3.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
 
-<link name="Servo_Bracket_-_U_Shaped_Defaut_v1_4">
-  <inertial>
-    <origin xyz="0.012239920882205782 -0.013066439075629235 0.02485819605758166" rpy="0 0 0"/>
-    <mass value="0.04341034449852496"/>
-    <inertia ixx="1.7e-05" iyy="1.5e-05" izz="1.1e-05" ixy="2e-06" iyz="1e-06" ixz="1e-06"/>
-  </inertial>
-  <visual>
-    <origin xyz="-0.01457 0.011312 -0.23042" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="package://fivedofarmzup_description/meshes/Servo_Bracket_-_U_Shaped_Defaut_v1_4.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="steel_satin"/>
-  </visual>
-  <collision>
-    <origin xyz="-0.01457 0.011312 -0.23042" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="package://fivedofarmzup_description/meshes/Servo_Bracket_-_U_Shaped_Defaut_v1_4.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
+  <link name="Servo_Bracket_-_U_Shaped_Defaut_v1_4">
+    <inertial>
+      <origin xyz="0.012239920882205782 -0.013066439075629235 0.02485819605758166" rpy="0 0 0"/>
+      <mass value="0.04341034449852496"/>
+      <inertia ixx="1.7e-05" iyy="1.5e-05" izz="1.1e-05" ixy="2e-06" iyz="1e-06" ixz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.01457 0.011312 -0.23042" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://fivedofarmzup_description/meshes/Servo_Bracket_-_U_Shaped_Defaut_v1_4.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="steel_satin"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.01457 0.011312 -0.23042" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://fivedofarmzup_description/meshes/Servo_Bracket_-_U_Shaped_Defaut_v1_4.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
 
-<joint name="Rigid 1" type="fixed">
-  <origin xyz="0.008257 -0.025556 0.025987" rpy="0 0 0"/>
-  <parent link="base_link"/>
-  <child link="Servo_Bracket_-_U_Shaped_Defaut_v1_1"/>
-</joint>
+  <link name="Gripz_v2_1">
+    <inertial>
+      <origin xyz="0.004727577693130912 0.003819555328425761 0.01661656787495741" rpy="0 0 0"/>
+      <mass value="0.26349523744862074"/>
+      <inertia ixx="5.2e-05" iyy="5.2e-05" izz="8e-05" ixy="0.0" iyz="-6e-06" ixz="-4e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.011103 0.042959 -0.333688" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://fivedofarmzup_description/meshes/Gripz_v2_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="steel_satin"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.011103 0.042959 -0.333688" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://fivedofarmzup_description/meshes/Gripz_v2_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
 
-<joint name="Rigid 2" type="fixed">
-  <origin xyz="0.0345 -0.005 0.0325" rpy="0 0 0"/>
-  <parent link="Servo_Bracket_-_U_Shaped_Defaut_v1_1"/>
-  <child link="Standard_Servo__1501MG__v2_1"/>
-</joint>
+  <link name="left-gripper_v3_1">
+    <inertial>
+      <origin xyz="0.03514942680960949 -0.04627531541596648 0.034010579630415594" rpy="0 0 0"/>
+      <mass value="0.024856990525039695"/>
+      <inertia ixx="3.2e-05" iyy="2.9e-05" izz="2e-05" ixy="8e-06" iyz="1.3e-05" ixz="-9e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.038118 0.025688 -0.356143" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://fivedofarmzup_description/meshes/left-gripper_v3_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="steel_satin"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.038118 0.025688 -0.356143" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://fivedofarmzup_description/meshes/left-gripper_v3_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
 
-<joint name="Revolute 3" type="continuous">
-  <origin xyz="-0.0148 0.005175 0.0173" rpy="0 0 0"/>
-  <parent link="Standard_Servo__1501MG__v2_1"/>
-  <child link="Servo_Bracket_-_U_Shaped_Defaut_v1_2"/>
-  <axis xyz="0.0 0.0 1.0"/>
-</joint>
+  <link name="right-gripper_v2_1">
+    <inertial>
+      <origin xyz="-0.05971218738144177 0.028650697898845896 0.012132756868953876" rpy="0 0 0"/>
+      <mass value="0.02485699052503968"/>
+      <inertia ixx="1.8e-05" iyy="3.3e-05" izz="3e-05" ixy="1.1e-05" iyz="-6e-06" ixz="1.2e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.019146 0.011906 -0.356167" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://fivedofarmzup_description/meshes/right-gripper_v2_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="steel_satin"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.019146 0.011906 -0.356167" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://fivedofarmzup_description/meshes/right-gripper_v2_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
 
-<joint name="Rigid 4" type="fixed">
-  <origin xyz="0.019956 0.016402 0.0195" rpy="0 0 0"/>
-  <parent link="Servo_Bracket_-_U_Shaped_Defaut_v1_2"/>
-  <child link="Standard_Servo__1501MG__v2_2"/>
-</joint>
+  <joint name="Rigid 1" type="fixed">
+    <origin xyz="0.008257 -0.025556 0.025987" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="Servo_Bracket_-_U_Shaped_Defaut_v1_1"/>
+  </joint>
 
-<joint name="Revolute 5" type="revolute">
-  <origin xyz="0.005131 -0.022026 -0.005175" rpy="0 0 0"/>
-  <parent link="Standard_Servo__1501MG__v2_2"/>
-  <child link="Servo_Bracket_-_U_Shaped_bis_Defaut_v1_1"/>
-  <axis xyz="-0.808932 0.587903 0.0"/>
-  <limit upper="1.570796327" lower="-1.570796327" effort="100" velocity="100"/>
-</joint>
+  <joint name="Rigid 2" type="fixed">
+    <origin xyz="0.0345 -0.005 0.0325" rpy="0 0 0"/>
+    <parent link="Servo_Bracket_-_U_Shaped_Defaut_v1_1"/>
+    <child link="Standard_Servo__1501MG__v2_1"/>
+  </joint>
 
-<joint name="Rigid 6" type="fixed">
-  <origin xyz="-0.021032 0.015286 0.053" rpy="0 0 0"/>
-  <parent link="Servo_Bracket_-_U_Shaped_bis_Defaut_v1_1"/>
-  <child link="U_Bracket_Defaut_v1_1"/>
-</joint>
+  <joint name="Revolute 3" type="continuous">
+    <origin xyz="-0.0148 0.005175 0.0173" rpy="0 0 0"/>
+    <parent link="Standard_Servo__1501MG__v2_1"/>
+    <child link="Servo_Bracket_-_U_Shaped_Defaut_v1_2"/>
+    <axis xyz="0.0 0.0 1.0"/>
+  </joint>
 
-<joint name="Revolute 7" type="revolute">
-  <origin xyz="0.021032 -0.015286 0.03" rpy="0 0 0"/>
-  <parent link="U_Bracket_Defaut_v1_1"/>
-  <child link="Standard_Servo__1501MG__v2_3"/>
-  <axis xyz="-0.808932 0.587903 0.0"/>
-  <limit upper="6.283185" lower="3.141593" effort="100" velocity="100"/>
-</joint>
+  <joint name="Rigid 4" type="fixed">
+    <origin xyz="0.019956 0.016402 0.0195" rpy="0 0 0"/>
+    <parent link="Servo_Bracket_-_U_Shaped_Defaut_v1_2"/>
+    <child link="Standard_Servo__1501MG__v2_2"/>
+  </joint>
 
-<joint name="Rigid 9" type="fixed">
-  <origin xyz="-0.012403 0.010999 0.036714" rpy="0 0 0"/>
-  <parent link="Servo_Bracket_-_U_Shaped_Defaut_v1_3"/>
-  <child link="Servo_Bracket_-_Corner_Mount_Defaut_v1_1"/>
-</joint>
+  <joint name="Revolute 5" type="revolute">
+    <origin xyz="0.005131 -0.022026 -0.005175" rpy="0 0 0"/>
+    <parent link="Standard_Servo__1501MG__v2_2"/>
+    <child link="Servo_Bracket_-_U_Shaped_bis_Defaut_v1_1"/>
+    <axis xyz="-0.808932 0.587903 0.0"/>
+    <limit upper="1.570796327" lower="-1.570796327" effort="100" velocity="100"/>
+  </joint>
 
-<joint name="Rigid 10" type="fixed">
-  <origin xyz="-0.010767 -0.014815 0.017968" rpy="0 0 0"/>
-  <parent link="Servo_Bracket_-_Corner_Mount_Defaut_v1_1"/>
-  <child link="U_Bracket_Defaut_v1_2"/>
-</joint>
+  <joint name="Rigid 6" type="fixed">
+    <origin xyz="-0.021032 0.015286 0.053" rpy="0 0 0"/>
+    <parent link="Servo_Bracket_-_U_Shaped_bis_Defaut_v1_1"/>
+    <child link="U_Bracket_Defaut_v1_1"/>
+  </joint>
 
-<joint name="Revolute 11" type="revolute">
-  <origin xyz="-0.024843 0.010043 0.029291" rpy="0 0 0"/>
-  <parent link="U_Bracket_Defaut_v1_2"/>
-  <child link="Standard_Servo__1501MG__v2_4"/>
-  <axis xyz="-0.808932 0.587903 0.0"/>
-  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
-</joint>
+  <joint name="Revolute 7" type="revolute">
+    <origin xyz="0.021032 -0.015286 0.03" rpy="0 0 0"/>
+    <parent link="U_Bracket_Defaut_v1_1"/>
+    <child link="Standard_Servo__1501MG__v2_3"/>
+    <axis xyz="-0.808932 0.587903 0.0"/>
+    <limit upper="6.283185" lower="3.141593" effort="100" velocity="100"/>
+  </joint>
 
-<joint name="Rigid 13" type="fixed">
-  <origin xyz="0.014292 -0.008402 0.036714" rpy="0 0 0"/>
-  <parent link="Servo_Bracket_-_U_Shaped_Defaut_v1_4"/>
-  <child link="Servo_Bracket_-_Corner_Mount_Defaut_v1_2"/>
-</joint>
+  <joint name="Rigid 9" type="fixed">
+    <origin xyz="-0.012403 0.010999 0.036714" rpy="0 0 0"/>
+    <parent link="Servo_Bracket_-_U_Shaped_Defaut_v1_3"/>
+    <child link="Servo_Bracket_-_Corner_Mount_Defaut_v1_1"/>
+  </joint>
 
-<joint name="Rigid 14" type="fixed">
-  <origin xyz="-0.010767 -0.014815 0.017968" rpy="0 0 0"/>
-  <parent link="Servo_Bracket_-_Corner_Mount_Defaut_v1_2"/>
-  <child link="Servo_Bracket_-_U_Shaped_Defaut_v1_5"/>
-</joint>
+  <joint name="Rigid 10" type="fixed">
+    <origin xyz="-0.010767 -0.014815 0.017968" rpy="0 0 0"/>
+    <parent link="Servo_Bracket_-_Corner_Mount_Defaut_v1_1"/>
+    <child link="U_Bracket_Defaut_v1_2"/>
+  </joint>
 
-<joint name="Rigid 15" type="fixed">
-  <origin xyz="-0.013796 0.007382 0.032812" rpy="0 0 0"/>
-  <parent link="Servo_Bracket_-_U_Shaped_Defaut_v1_5"/>
-  <child link="Standard_Servo__1501MG__v2_5"/>
-</joint>
+  <joint name="Revolute 11" type="revolute">
+    <origin xyz="-0.024843 0.010043 0.029291" rpy="0 0 0"/>
+    <parent link="U_Bracket_Defaut_v1_2"/>
+    <child link="Standard_Servo__1501MG__v2_4"/>
+    <axis xyz="-0.808932 0.587903 0.0"/>
+    <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+  </joint>
 
-<joint name="Rigid 16" type="fixed">
-  <origin xyz="-0.009144 0.016845 -0.013333" rpy="0 0 0"/>
-  <parent link="Standard_Servo__1501MG__v2_3"/>
-  <child link="Servo_Bracket_-_U_Shaped_Defaut_v1_3"/>
-</joint>
+  <joint name="Rigid 13" type="fixed">
+    <origin xyz="0.014292 -0.008402 0.036714" rpy="0 0 0"/>
+    <parent link="Servo_Bracket_-_U_Shaped_Defaut_v1_4"/>
+    <child link="Servo_Bracket_-_Corner_Mount_Defaut_v1_2"/>
+  </joint>
 
-<joint name="Rigid 17" type="fixed">
-  <origin xyz="0.018683 -0.003379 -0.013332" rpy="0 0 0"/>
-  <parent link="Standard_Servo__1501MG__v2_4"/>
-  <child link="Servo_Bracket_-_U_Shaped_Defaut_v1_4"/>
-</joint>
+  <joint name="Rigid 14" type="fixed">
+    <origin xyz="-0.010767 -0.014815 0.017968" rpy="0 0 0"/>
+    <parent link="Servo_Bracket_-_Corner_Mount_Defaut_v1_2"/>
+    <child link="Servo_Bracket_-_U_Shaped_Defaut_v1_5"/>
+  </joint>
+
+  <joint name="Rigid 15" type="fixed">
+    <origin xyz="-0.013796 0.007382 0.032812" rpy="0 0 0"/>
+    <parent link="Servo_Bracket_-_U_Shaped_Defaut_v1_5"/>
+    <child link="Standard_Servo__1501MG__v2_5"/>
+  </joint>
+
+  <joint name="Rigid 16" type="fixed">
+    <origin xyz="-0.009144 0.016845 -0.013333" rpy="0 0 0"/>
+    <parent link="Standard_Servo__1501MG__v2_3"/>
+    <child link="Servo_Bracket_-_U_Shaped_Defaut_v1_3"/>
+  </joint>
+
+  <joint name="Rigid 17" type="fixed">
+    <origin xyz="0.018683 -0.003379 -0.013332" rpy="0 0 0"/>
+    <parent link="Standard_Servo__1501MG__v2_4"/>
+    <child link="Servo_Bracket_-_U_Shaped_Defaut_v1_4"/>
+  </joint>
+
+    <joint name="Revolute 19" type="revolute">
+    <origin xyz="0.006804 -0.015812 0.015774" rpy="0 0 0"/>
+    <parent link="Standard_Servo__1501MG__v2_5"/>
+    <child link="Gripz_v2_1"/>
+    <axis xyz="-0.127014 -0.174766 0.976383"/>
+    <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+  </joint>
+
+  <joint name="Revolute 21" type="continuous">
+    <origin xyz="0.027015 0.017271 0.022455" rpy="0 0 0"/>
+    <parent link="Gripz_v2_1"/>
+    <child link="left-gripper_v3_1"/>
+    <axis xyz="0.574019 0.789827 0.216045"/>
+  </joint>
+
+  <joint name="Revolute 22" type="continuous">
+    <origin xyz="0.008043 0.031053 0.022479" rpy="0 0 0"/>
+    <parent link="Gripz_v2_1"/>
+    <child link="right-gripper_v2_1"/>
+    <axis xyz="0.574019 0.789827 0.216045"/>
+  </joint>
 
 </robot>
