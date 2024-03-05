@@ -25,6 +25,10 @@
     </collision>
   </link>
 
+  <gazebo reference="base_link">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+
   <link name="Servo_Bracket_-_U_Shaped_Defaut_v1_1">
     <inertial>
       <origin xyz="0.009499875926498334 0.007075951002761895 0.014917192812203866" rpy="0 0 0"/>
