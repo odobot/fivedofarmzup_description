@@ -11,6 +11,7 @@ from launch_ros.actions import Node
 def generate_launch_description():
 
     package_name='fivedofarmzup_description'
+    urdf_file = os.path.join(package_name,"urdf","fivedofarmzup.xacro")
 
     sim = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
@@ -31,15 +32,21 @@ def generate_launch_description():
         executable='joint_state_publisher_gui'
     )
 
-    gazebo = IncludeLaunchDescription(
+    gazebo1 = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
                     get_package_share_directory('gazebo_ros'), 'launch', 'gazebo.launch.py')]),
              )
+        
+    Gazebo = Node(
+        package="gazebo_ros",
+        executable="spawn_entity.py",
+        arguments=["-entity","fivedofarmzup_description","-b","-file",urdf_file,],
+    )
     
     return LaunchDescription([
         sim,
         joint,
         rviz2,
-        gazebo,
+        Gazebo,
         # mapping,
     ])
