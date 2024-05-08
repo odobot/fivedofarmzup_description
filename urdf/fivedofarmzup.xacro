@@ -27,18 +27,6 @@
     </collision>
   </link>
 
-  <!-- <gazebo reference="base_link">
-    <material>Gazebo/Blue</material>
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
-    <self_collide>true</self_collide>
-    <gravity>true</gravity>
-  </gazebo> -->
-
-  <!-- <gazebo reference="base_link">
-    <material>Gazebo/Blue</material>
-  </gazebo> -->
-
   <link name="Servo_Bracket_-_U_Shaped_Defaut_v1_1">
     <inertial>
       <origin xyz="0.009499875926498334 0.007075951002761895 0.014917192812203866" rpy="0 0 0"/>
@@ -60,13 +48,6 @@
     </collision>
   </link>
 
-  <!-- <gazebo reference="Servo_Bracket_-_U_Shaped_Defaut_v1_1">
-    <material>Gazebo/Blue</material>
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
-    <self_collide>true</self_collide>
-    <gravity>true</gravity>
-  </gazebo> -->
 
   <link name="Standard_Servo__1501MG__v2_1">
     <inertial>
@@ -89,14 +70,6 @@
     </collision>
   </link>
 
-  <!-- <gazebo reference="Standard_Servo__1501MG__v2_1">
-    <material>Gazebo/Blue</material>
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
-    <self_collide>true</self_collide>
-    <gravity>true</gravity>
-  </gazebo> -->
-
   <link name="Servo_Bracket_-_U_Shaped_Defaut_v1_2">
     <inertial>
       <origin xyz="-0.008965167087897054 0.006515116795615745 0.007423455818892699" rpy="0 0 0"/>
@@ -117,14 +90,6 @@
       </geometry>
     </collision>
   </link>
-
-  <!-- <gazebo reference="Servo_Bracket_-_U_Shaped_Defaut_v1_2">
-    <material>Gazebo/Blue</material>
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
-    <self_collide>true</self_collide>
-    <gravity>true</gravity>
-  </gazebo> -->
 
   <link name="Standard_Servo__1501MG__v2_2">
     <inertial>
@@ -147,14 +112,6 @@
     </collision>
   </link>
 
-  <!-- <gazebo reference="Standard_Servo__1501MG__v2_2">
-    <material>Gazebo/Blue</material>
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
-    <self_collide>true</self_collide>
-    <gravity>true</gravity>
-  </gazebo> -->
-
   <link name="Servo_Bracket_-_U_Shaped_bis_Defaut_v1_1">
     <inertial>
       <origin xyz="-0.02103195136733882 0.015285710216863195 0.030870482183262105" rpy="0 0 0"/>
@@ -175,14 +132,6 @@
       </geometry>
     </collision>
   </link>
-
-  <!-- <gazebo reference="Servo_Bracket_-_U_Shaped_bis_Defaut_v1_1">
-    <material>Gazebo/Blue</material>
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
-    <self_collide>true</self_collide>
-    <gravity>true</gravity>
-  </gazebo> -->
 
   <link name="U_Bracket_Defaut_v1_1">
     <inertial>
@@ -205,14 +154,6 @@
     </collision>
   </link>
 
-  <!-- <gazebo reference="U_Bracket_Defaut_v1_1">
-    <material>Gazebo/Blue</material>
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
-    <self_collide>true</self_collide>
-    <gravity>true</gravity>
-  </gazebo> -->
-
   <link name="Standard_Servo__1501MG__v2_3">
     <inertial>
       <origin xyz="-0.02145824466800232 0.012973536221972538 0.009585346693335578" rpy="0 0 0"/>
@@ -233,14 +174,6 @@
       </geometry>
     </collision>
   </link>
-
-  <!-- <gazebo reference="Standard_Servo__1501MG__v2_3">
-    <material>Gazebo/Blue</material>
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
-    <self_collide>true</self_collide>
-    <gravity>true</gravity>
-  </gazebo> -->
 
   <link name="Servo_Bracket_-_Corner_Mount_Defaut_v1_1">
     <inertial>
@@ -263,14 +196,6 @@
     </collision>
   </link>
 
-  <!-- <gazebo reference="Servo_Bracket_-_Corner_Mount_Defaut_v1_1">
-    <material>Gazebo/Blue</material>
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
-    <self_collide>true</self_collide>
-    <gravity>true</gravity>
-  </gazebo> -->
-
   <link name="U_Bracket_Defaut_v1_2">
     <inertial>
       <origin xyz="-0.0015140184880517472 -0.0020826854169027353 0.011637615110598576" rpy="0 0 0"/>
@@ -291,14 +216,6 @@
       </geometry>
     </collision>
   </link>
-
-  <!-- <gazebo reference="U_Bracket_Defaut_v1_2">
-    <material>Gazebo/Blue</material>
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
-    <self_collide>true</self_collide>
-    <gravity>true</gravity>
-  </gazebo> -->
 
   <link name="Standard_Servo__1501MG__v2_4">
     <inertial>
@@ -321,14 +238,6 @@
     </collision>
   </link>
 
-  <!-- <gazebo reference="Standard_Servo__1501MG__v2_4">
-    <material>Gazebo/Blue</material>
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
-    <self_collide>true</self_collide>
-    <gravity>true</gravity>
-  </gazebo> -->
-
   <link name="Servo_Bracket_-_Corner_Mount_Defaut_v1_2">
     <inertial>
       <origin xyz="-0.004161821817511239 -0.005725949363095464 0.010830076353466334" rpy="0 0 0"/>
@@ -349,14 +258,6 @@
       </geometry>
     </collision>
   </link>
-
-  <!-- <gazebo reference="Servo_Bracket_-_Corner_Mount_Defaut_v1_2">
-    <material>Gazebo/Blue</material>
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
-    <self_collide>true</self_collide>
-    <gravity>true</gravity>
-  </gazebo> -->
 
   <link name="Servo_Bracket_-_U_Shaped_Defaut_v1_5">
     <inertial>
@@ -379,14 +280,6 @@
     </collision>
   </link>
 
-  <!-- <gazebo reference="Servo_Bracket_-_U_Shaped_Defaut_v1_5">
-    <material>Gazebo/Blue</material>
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
-    <self_collide>true</self_collide>
-    <gravity>true</gravity>
-  </gazebo> -->
-
   <link name="Standard_Servo__1501MG__v2_5">
     <inertial>
       <origin xyz="0.017918988263733164 -0.017216754314859712 -0.008621667108157482" rpy="0 0 0"/>
@@ -407,14 +300,6 @@
       </geometry>
     </collision>
   </link>
-
-  <!-- <gazebo reference="Standard_Servo__1501MG__v2_5">
-    <material>Gazebo/Blue</material>
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
-    <self_collide>true</self_collide>
-    <gravity>true</gravity>
-  </gazebo> -->
 
   <link name="Servo_Bracket_-_U_Shaped_Defaut_v1_3">
     <inertial>
@@ -437,14 +322,6 @@
     </collision>
   </link>
 
-  <!-- <gazebo reference="Servo_Bracket_-_U_Shaped_Defaut_v1_3">
-    <material>Gazebo/Blue</material>
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
-    <self_collide>true</self_collide>
-    <gravity>true</gravity>
-  </gazebo> -->
-
   <link name="Servo_Bracket_-_U_Shaped_Defaut_v1_4">
     <inertial>
       <origin xyz="0.012239920882205782 -0.013066439075629235 0.02485819605758166" rpy="0 0 0"/>
@@ -465,14 +342,6 @@
       </geometry>
     </collision>
   </link>
-
-  <!-- <gazebo reference="Servo_Bracket_-_U_Shaped_Defaut_v1_4">
-    <material>Gazebo/Blue</material>
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
-    <self_collide>true</self_collide>
-    <gravity>true</gravity>
-  </gazebo> -->
 
   <link name="Gripz_v2_1">
     <inertial>
@@ -495,14 +364,6 @@
     </collision>
   </link>
 
-  <!-- <gazebo reference="Gripz_v2_1">
-    <material>Gazebo/Blue</material>
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
-    <self_collide>true</self_collide>
-    <gravity>true</gravity>
-  </gazebo> -->
-
   <link name="left-gripper_v3_1">
     <inertial>
       <origin xyz="0.03514942680960949 -0.04627531541596648 0.034010579630415594" rpy="0 0 0"/>
@@ -524,14 +385,6 @@
     </collision>
   </link>
 
-  <!-- <gazebo reference="left-gripper_v3_1">
-    <material>Gazebo/Blue</material>
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
-    <self_collide>true</self_collide>
-    <gravity>true</gravity>
-  </gazebo> -->
-
   <link name="right-gripper_v2_1">
     <inertial>
       <origin xyz="-0.05971218738144177 0.028650697898845896 0.012132756868953876" rpy="0 0 0"/>
@@ -552,14 +405,6 @@
       </geometry>
     </collision>
   </link>
-
-  <!-- <gazebo reference="right-gripper_v2_1">
-    <material>Gazebo/Blue</material>
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
-    <self_collide>true</self_collide>
-    <gravity>true</gravity>
-  </gazebo> -->
 
   <joint name="Rigid 1" type="fixed">
     <origin xyz="0.008257 -0.025556 0.025987" rpy="0 0 0"/>

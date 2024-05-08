@@ -14,7 +14,7 @@
     <xacro:property name="camera_color" value="Gazebo/Silver" />
 
     <gazebo reference="base_link">
-        <material>Gazebo/Blue</material>
+        <material>Gazebo/Green</material>
         <mu1>0.2</mu1>
         <mu2>0.2</mu2>
         <self_collide>true</self_collide>
@@ -22,7 +22,7 @@
     </gazebo>
 
     <gazebo reference="Servo_Bracket_-_U_Shaped_Defaut_v1_1">
-        <material>Gazebo/Blue</material>
+        <material>Gazebo/Red</material>
         <mu1>0.2</mu1>
         <mu2>0.2</mu2>
         <self_collide>true</self_collide>
@@ -30,7 +30,7 @@
     </gazebo>
 
     <gazebo reference="Standard_Servo__1501MG__v2_1">
-        <material>Gazebo/Blue</material>
+        <material>Gazebo/Black</material>
         <mu1>0.2</mu1>
         <mu2>0.2</mu2>
         <self_collide>true</self_collide>
@@ -38,7 +38,7 @@
     </gazebo>
 
     <gazebo reference="Servo_Bracket_-_U_Shaped_Defaut_v1_2">
-        <material>Gazebo/Blue</material>
+        <material>Gazebo/Red</material>
         <mu1>0.2</mu1>
         <mu2>0.2</mu2>
         <self_collide>true</self_collide>
@@ -46,7 +46,7 @@
     </gazebo>
 
     <gazebo reference="Standard_Servo__1501MG__v2_2">
-        <material>Gazebo/Blue</material>
+        <material>Gazebo/Black</material>
         <mu1>0.2</mu1>
         <mu2>0.2</mu2>
         <self_collide>true</self_collide>
