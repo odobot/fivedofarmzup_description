@@ -79,3 +79,5 @@ To launch rviz2, joint_state_publisher_gui and the robot all at once use the com
 
 Gazebo will be  launched haven't added the needed code for the arm to be launched in it thus you can just close Gazebo if it opens.(will be adding the code soon)
 
+## Reference
+https://wiki.ros.org/urdf/XML/joint

@@ -31,22 +31,9 @@ def generate_launch_description():
         namespace='',
         executable='joint_state_publisher_gui'
     )
-
-    gazebo1 = IncludeLaunchDescription(
-                PythonLaunchDescriptionSource([os.path.join(
-                    get_package_share_directory('gazebo_ros'), 'launch', 'gazebo.launch.py')]),
-             )
-        
-    Gazebo = Node(
-        package="gazebo_ros",
-        executable="spawn_entity.py",
-        arguments=["-entity","fivedofarmzup_description","-b","-file",urdf_file,],
-    )
     
     return LaunchDescription([
         sim,
         joint,
-        rviz2,
-        Gazebo,
-        # mapping,
+        rviz2
     ])

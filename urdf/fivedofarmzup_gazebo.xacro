@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding = "UTF-8"?>
+
+<robot name="fivedofarmzup"
+    xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:property name="base_color" value =  "Gazebo/Wood"/>
+    <xacro:property name="waist_color" value = "Gazebo/FlatBlack"/>
+    <xacro:property name="link_1_color" value = "Gazebo/FlatBlack"/>
+    <xacro:property name="link_2_color" value = "Gazebo/FlatBlack" />
+    <xacro:property name="gripper_base_color" value = "Gazebo/FlatBlack" />
+    <xacro:property name="gripper_gears" value="Gazebo/Blue"/>
+    <xacro:property name="camera_support_color" value="Gazebo/WoodFloor" />
+    <xacro:property name="container_color" value="Gazebo/Red" />
+    <xacro:property name="camera_color" value="Gazebo/Silver" />
+
+    <gazebo reference="base_link">
+        <material>Gazebo/Blue</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <self_collide>true</self_collide>
+        <gravity>true</gravity>
+    </gazebo>
+
+    <gazebo reference="Servo_Bracket_-_U_Shaped_Defaut_v1_1">
+        <material>Gazebo/Blue</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <self_collide>true</self_collide>
+        <gravity>true</gravity>
+    </gazebo>
+
+    <gazebo reference="Standard_Servo__1501MG__v2_1">
+        <material>Gazebo/Blue</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <self_collide>true</self_collide>
+        <gravity>true</gravity>
+    </gazebo>
+
+    <gazebo reference="Servo_Bracket_-_U_Shaped_Defaut_v1_2">
+        <material>Gazebo/Blue</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <self_collide>true</self_collide>
+        <gravity>true</gravity>
+    </gazebo>
+
+    <gazebo reference="Standard_Servo__1501MG__v2_2">
+        <material>Gazebo/Blue</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <self_collide>true</self_collide>
+        <gravity>true</gravity>
+    </gazebo>
+
+    <gazebo reference="Servo_Bracket_-_U_Shaped_bis_Defaut_v1_1">
+        <material>Gazebo/Blue</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <self_collide>true</self_collide>
+        <gravity>true</gravity>
+    </gazebo>
+
+    <gazebo reference="U_Bracket_Defaut_v1_1">
+        <material>Gazebo/Blue</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <self_collide>true</self_collide>
+        <gravity>true</gravity>
+    </gazebo>
+
+    <gazebo reference="Standard_Servo__1501MG__v2_3">
+        <material>Gazebo/Blue</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <self_collide>true</self_collide>
+        <gravity>true</gravity>
+    </gazebo>
+
+    <gazebo reference="Servo_Bracket_-_Corner_Mount_Defaut_v1_1">
+        <material>Gazebo/Blue</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <self_collide>true</self_collide>
+        <gravity>true</gravity>
+    </gazebo>
+
+    <gazebo reference="U_Bracket_Defaut_v1_2">
+        <material>Gazebo/Blue</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <self_collide>true</self_collide>
+        <gravity>true</gravity>
+    </gazebo>
+
+    <gazebo reference="Standard_Servo__1501MG__v2_4">
+        <material>Gazebo/Blue</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <self_collide>true</self_collide>
+        <gravity>true</gravity>
+    </gazebo>
+
+
+    <gazebo reference="Servo_Bracket_-_Corner_Mount_Defaut_v1_2">
+        <material>Gazebo/Blue</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <self_collide>true</self_collide>
+        <gravity>true</gravity>
+    </gazebo>
+
+    <gazebo reference="Servo_Bracket_-_U_Shaped_Defaut_v1_5">
+        <material>Gazebo/Blue</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <self_collide>true</self_collide>
+        <gravity>true</gravity>
+    </gazebo>
+
+    <gazebo reference="Standard_Servo__1501MG__v2_5">
+        <material>Gazebo/Blue</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <self_collide>true</self_collide>
+        <gravity>true</gravity>
+    </gazebo>
+
+    <gazebo reference="Servo_Bracket_-_U_Shaped_Defaut_v1_3">
+        <material>Gazebo/Blue</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <self_collide>true</self_collide>
+        <gravity>true</gravity>
+    </gazebo>
+
+    <gazebo reference="Servo_Bracket_-_U_Shaped_Defaut_v1_4">
+        <material>Gazebo/Blue</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <self_collide>true</self_collide>
+        <gravity>true</gravity>
+    </gazebo>
+
+    <gazebo reference="Gripz_v2_1">
+        <material>Gazebo/Blue</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <self_collide>true</self_collide>
+        <gravity>true</gravity>
+    </gazebo>
+
+    <gazebo reference="left-gripper_v3_1">
+        <material>Gazebo/Blue</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <self_collide>true</self_collide>
+        <gravity>true</gravity>
+    </gazebo>
+
+    <gazebo reference="right-gripper_v2_1">
+        <material>Gazebo/Blue</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <self_collide>true</self_collide>
+        <gravity>true</gravity>
+    </gazebo>
+
+</robot>

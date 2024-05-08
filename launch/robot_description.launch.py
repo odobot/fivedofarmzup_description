@@ -20,7 +20,6 @@ def generate_launch_description():
                     "fivedofarmzup.xacro",
                 ]
             ),
-
         ]
     )
     robot_description = {"robot_description": robot_description_content}
