@@ -1,0 +1,1229 @@
+<sdf version='1.7'>
+  <world name='default'>
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+    <model name='ground_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <physics type='ode'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>1</shadows>
+    </scene>
+    <audio>
+      <device>default</device>
+    </audio>
+    <wind/>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <model name='robotic_arm'>
+      <link name='base_link'>
+        <inertial>
+          <pose>0.014852 -0.019978 0.036859 0 -0 0</pose>
+          <mass>0.421359</mass>
+          <inertia>
+            <ixx>0.000248406</ixx>
+            <ixy>1.21688e-05</ixy>
+            <ixz>-3.66607e-05</ixz>
+            <iyy>0.000339394</iyy>
+            <iyz>4.69539e-05</iyz>
+            <izz>0.000197969</izz>
+          </inertia>
+        </inertial>
+        <collision name='base_link_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>model://fivedofarmzup_description/meshes/base_link.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.2</mu>
+                <mu2>0.2</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <collision name='base_link_fixed_joint_lump__Servo_Bracket_-_U_Shaped_Defaut_v1_1_collision_1'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>model://fivedofarmzup_description/meshes/Servo_Bracket_-_U_Shaped_Defaut_v1_1.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.2</mu>
+                <mu2>0.2</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <collision name='base_link_fixed_joint_lump__Standard_Servo__1501MG__v2_1_collision_2'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>model://fivedofarmzup_description/meshes/Standard_Servo__1501MG__v2_1.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.2</mu>
+                <mu2>0.2</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='base_link_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>model://fivedofarmzup_description/meshes/base_link.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Green</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__Servo_Bracket_-_U_Shaped_Defaut_v1_1_visual_1'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>model://fivedofarmzup_description/meshes/Servo_Bracket_-_U_Shaped_Defaut_v1_1.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__Standard_Servo__1501MG__v2_1_visual_2'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>model://fivedofarmzup_description/meshes/Standard_Servo__1501MG__v2_1.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Black</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <self_collide>1</self_collide>
+        <gravity>1</gravity>
+        <self_collide>1</self_collide>
+        <gravity>1</gravity>
+        <self_collide>1</self_collide>
+        <gravity>1</gravity>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='Revolute 3' type='revolute'>
+        <pose relative_to='base_link'>0.027957 -0.025381 0.075787 0 -0 0</pose>
+        <parent>base_link</parent>
+        <child>Servo_Bracket_-_U_Shaped_Defaut_v1_2</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='Servo_Bracket_-_U_Shaped_Defaut_v1_2'>
+        <pose relative_to='Revolute 3'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>-0.001997 0.001852 0.013266 0 -0 0</pose>
+          <mass>0.28286</mass>
+          <inertia>
+            <ixx>5.38655e-05</ixx>
+            <ixy>-2.33366e-06</ixy>
+            <ixz>-1.08746e-06</ixz>
+            <iyy>5.62399e-05</iyy>
+            <iyz>3.97152e-07</iyz>
+            <izz>8.46049e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='Servo_Bracket_-_U_Shaped_Defaut_v1_2_collision'>
+          <pose>-0.027957 0.025381 -0.075787 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>model://fivedofarmzup_description/meshes/Servo_Bracket_-_U_Shaped_Defaut_v1_2.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.2</mu>
+                <mu2>0.2</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <collision name='Servo_Bracket_-_U_Shaped_Defaut_v1_2_fixed_joint_lump__Standard_Servo__1501MG__v2_2_collision_1'>
+          <pose>-0.027957 0.025381 -0.075787 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>model://fivedofarmzup_description/meshes/Standard_Servo__1501MG__v2_2.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.2</mu>
+                <mu2>0.2</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='Servo_Bracket_-_U_Shaped_Defaut_v1_2_visual'>
+          <pose>-0.027957 0.025381 -0.075787 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>model://fivedofarmzup_description/meshes/Servo_Bracket_-_U_Shaped_Defaut_v1_2.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='Servo_Bracket_-_U_Shaped_Defaut_v1_2_fixed_joint_lump__Standard_Servo__1501MG__v2_2_visual_1'>
+          <pose>-0.027957 0.025381 -0.075787 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>model://fivedofarmzup_description/meshes/Standard_Servo__1501MG__v2_2.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Black</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <self_collide>1</self_collide>
+        <gravity>1</gravity>
+        <self_collide>1</self_collide>
+        <gravity>1</gravity>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='Revolute 5' type='revolute'>
+        <pose relative_to='Servo_Bracket_-_U_Shaped_Defaut_v1_2'>0.025087 -0.005624 0.014325 0 -0 0</pose>
+        <parent>Servo_Bracket_-_U_Shaped_Defaut_v1_2</parent>
+        <child>Servo_Bracket_-_U_Shaped_bis_Defaut_v1_1</child>
+        <axis>
+          <xyz>-0.808932 0.587903 0</xyz>
+          <limit>
+            <lower>-1.5708</lower>
+            <upper>1.5708</upper>
+            <effort>100</effort>
+            <velocity>100</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='Servo_Bracket_-_U_Shaped_bis_Defaut_v1_1'>
+        <pose relative_to='Revolute 5'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>-0.021032 0.015286 0.044906 0 -0 0</pose>
+          <mass>0.110048</mass>
+          <inertia>
+            <ixx>8.99116e-05</ixx>
+            <ixy>2.6e-05</ixy>
+            <ixz>-1.3932e-17</ixz>
+            <iyy>0.000106912</iyy>
+            <iyz>3.32037e-18</iyz>
+            <izz>6.7e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='Servo_Bracket_-_U_Shaped_bis_Defaut_v1_1_collision'>
+          <pose>-0.053044 0.031005 -0.090112 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>model://fivedofarmzup_description/meshes/Servo_Bracket_-_U_Shaped_bis_Defaut_v1_1.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.2</mu>
+                <mu2>0.2</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <collision name='Servo_Bracket_-_U_Shaped_bis_Defaut_v1_1_fixed_joint_lump__U_Bracket_Defaut_v1_1_collision_1'>
+          <pose>-0.053044 0.031005 -0.090112 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>model://fivedofarmzup_description/meshes/U_Bracket_Defaut_v1_1.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.2</mu>
+                <mu2>0.2</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='Servo_Bracket_-_U_Shaped_bis_Defaut_v1_1_visual'>
+          <pose>-0.053044 0.031005 -0.090112 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>model://fivedofarmzup_description/meshes/Servo_Bracket_-_U_Shaped_bis_Defaut_v1_1.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Blue</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='Servo_Bracket_-_U_Shaped_bis_Defaut_v1_1_fixed_joint_lump__U_Bracket_Defaut_v1_1_visual_1'>
+          <pose>-0.053044 0.031005 -0.090112 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>model://fivedofarmzup_description/meshes/U_Bracket_Defaut_v1_1.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Blue</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <self_collide>1</self_collide>
+        <gravity>1</gravity>
+        <self_collide>1</self_collide>
+        <gravity>1</gravity>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='Revolute 7' type='revolute'>
+        <pose relative_to='Servo_Bracket_-_U_Shaped_bis_Defaut_v1_1'>0 0 0.083 0 -0 0</pose>
+        <parent>Servo_Bracket_-_U_Shaped_bis_Defaut_v1_1</parent>
+        <child>Standard_Servo__1501MG__v2_3</child>
+        <axis>
+          <xyz>-0.808932 0.587903 0</xyz>
+          <limit>
+            <lower>3.14159</lower>
+            <upper>6.28318</upper>
+            <effort>100</effort>
+            <velocity>100</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='Standard_Servo__1501MG__v2_3'>
+        <pose relative_to='Revolute 7'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>-0.023792 0.014637 0.016829 0 -0 0</pose>
+          <mass>0.346893</mass>
+          <inertia>
+            <ixx>0.000167242</ixx>
+            <ixy>2.1181e-05</ixy>
+            <ixz>2.7773e-05</ixz>
+            <iyy>0.000183782</iyy>
+            <iyz>9.00063e-06</iyz>
+            <izz>9.0555e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='Standard_Servo__1501MG__v2_3_collision'>
+          <pose>-0.053044 0.031005 -0.173112 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>model://fivedofarmzup_description/meshes/Standard_Servo__1501MG__v2_3.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.2</mu>
+                <mu2>0.2</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <collision name='Standard_Servo__1501MG__v2_3_fixed_joint_lump__Servo_Bracket_-_U_Shaped_Defaut_v1_3_collision_1'>
+          <pose>-0.053044 0.031005 -0.173112 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>model://fivedofarmzup_description/meshes/Servo_Bracket_-_U_Shaped_Defaut_v1_3.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.2</mu>
+                <mu2>0.2</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <collision name='Standard_Servo__1501MG__v2_3_fixed_joint_lump__Servo_Bracket_-_Corner_Mount_Defaut_v1_1_collision_2'>
+          <pose>-0.053044 0.031005 -0.173112 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>model://fivedofarmzup_description/meshes/Servo_Bracket_-_Corner_Mount_Defaut_v1_1.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.2</mu>
+                <mu2>0.2</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <collision name='Standard_Servo__1501MG__v2_3_fixed_joint_lump__U_Bracket_Defaut_v1_2_collision_3'>
+          <pose>-0.053044 0.031005 -0.173112 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>model://fivedofarmzup_description/meshes/U_Bracket_Defaut_v1_2.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.2</mu>
+                <mu2>0.2</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='Standard_Servo__1501MG__v2_3_visual'>
+          <pose>-0.053044 0.031005 -0.173112 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>model://fivedofarmzup_description/meshes/Standard_Servo__1501MG__v2_3.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Blue</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='Standard_Servo__1501MG__v2_3_fixed_joint_lump__Servo_Bracket_-_U_Shaped_Defaut_v1_3_visual_1'>
+          <pose>-0.053044 0.031005 -0.173112 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>model://fivedofarmzup_description/meshes/Servo_Bracket_-_U_Shaped_Defaut_v1_3.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Blue</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='Standard_Servo__1501MG__v2_3_fixed_joint_lump__Servo_Bracket_-_Corner_Mount_Defaut_v1_1_visual_2'>
+          <pose>-0.053044 0.031005 -0.173112 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>model://fivedofarmzup_description/meshes/Servo_Bracket_-_Corner_Mount_Defaut_v1_1.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Blue</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='Standard_Servo__1501MG__v2_3_fixed_joint_lump__U_Bracket_Defaut_v1_2_visual_3'>
+          <pose>-0.053044 0.031005 -0.173112 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>model://fivedofarmzup_description/meshes/U_Bracket_Defaut_v1_2.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Blue</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <self_collide>1</self_collide>
+        <gravity>1</gravity>
+        <self_collide>1</self_collide>
+        <gravity>1</gravity>
+        <self_collide>1</self_collide>
+        <gravity>1</gravity>
+        <self_collide>1</self_collide>
+        <gravity>1</gravity>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='Revolute 11' type='revolute'>
+        <pose relative_to='Standard_Servo__1501MG__v2_3'>-0.057157 0.023072 0.07064 0 -0 0</pose>
+        <parent>Standard_Servo__1501MG__v2_3</parent>
+        <child>Standard_Servo__1501MG__v2_4</child>
+        <axis>
+          <xyz>-0.808932 0.587903 0</xyz>
+          <limit>
+            <lower>-1.5708</lower>
+            <upper>1.5708</upper>
+            <effort>100</effort>
+            <velocity>100</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='Standard_Servo__1501MG__v2_4'>
+        <pose relative_to='Revolute 11'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0.023489 -0.026381 0.036772 0 -0 0</pose>
+          <mass>0.584388</mass>
+          <inertia>
+            <ixx>0.00060524</ixx>
+            <ixy>4.13477e-05</ixy>
+            <ixz>-3.30213e-05</ixz>
+            <iyy>0.00056653</iyy>
+            <iyz>0.000168949</iyz>
+            <izz>0.000181967</izz>
+          </inertia>
+        </inertial>
+        <collision name='Standard_Servo__1501MG__v2_4_collision'>
+          <pose>0.004113 0.007933 -0.243752 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>model://fivedofarmzup_description/meshes/Standard_Servo__1501MG__v2_4.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.2</mu>
+                <mu2>0.2</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <collision name='Standard_Servo__1501MG__v2_4_fixed_joint_lump__Servo_Bracket_-_U_Shaped_Defaut_v1_4_collision_1'>
+          <pose>0.004113 0.007933 -0.243752 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>model://fivedofarmzup_description/meshes/Servo_Bracket_-_U_Shaped_Defaut_v1_4.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.2</mu>
+                <mu2>0.2</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <collision name='Standard_Servo__1501MG__v2_4_fixed_joint_lump__Servo_Bracket_-_Corner_Mount_Defaut_v1_2_collision_2'>
+          <pose>0.004113 0.007933 -0.243752 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>model://fivedofarmzup_description/meshes/Servo_Bracket_-_Corner_Mount_Defaut_v1_2.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.2</mu>
+                <mu2>0.2</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <collision name='Standard_Servo__1501MG__v2_4_fixed_joint_lump__Servo_Bracket_-_U_Shaped_Defaut_v1_5_collision_3'>
+          <pose>0.004113 0.007933 -0.243752 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>model://fivedofarmzup_description/meshes/Servo_Bracket_-_U_Shaped_Defaut_v1_5.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.2</mu>
+                <mu2>0.2</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <collision name='Standard_Servo__1501MG__v2_4_fixed_joint_lump__Standard_Servo__1501MG__v2_5_collision_4'>
+          <pose>0.004113 0.007933 -0.243752 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>model://fivedofarmzup_description/meshes/Standard_Servo__1501MG__v2_5.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.2</mu>
+                <mu2>0.2</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='Standard_Servo__1501MG__v2_4_visual'>
+          <pose>0.004113 0.007933 -0.243752 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>model://fivedofarmzup_description/meshes/Standard_Servo__1501MG__v2_4.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Blue</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='Standard_Servo__1501MG__v2_4_fixed_joint_lump__Servo_Bracket_-_U_Shaped_Defaut_v1_4_visual_1'>
+          <pose>0.004113 0.007933 -0.243752 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>model://fivedofarmzup_description/meshes/Servo_Bracket_-_U_Shaped_Defaut_v1_4.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Blue</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='Standard_Servo__1501MG__v2_4_fixed_joint_lump__Servo_Bracket_-_Corner_Mount_Defaut_v1_2_visual_2'>
+          <pose>0.004113 0.007933 -0.243752 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>model://fivedofarmzup_description/meshes/Servo_Bracket_-_Corner_Mount_Defaut_v1_2.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Blue</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='Standard_Servo__1501MG__v2_4_fixed_joint_lump__Servo_Bracket_-_U_Shaped_Defaut_v1_5_visual_3'>
+          <pose>0.004113 0.007933 -0.243752 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>model://fivedofarmzup_description/meshes/Servo_Bracket_-_U_Shaped_Defaut_v1_5.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Blue</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='Standard_Servo__1501MG__v2_4_fixed_joint_lump__Standard_Servo__1501MG__v2_5_visual_4'>
+          <pose>0.004113 0.007933 -0.243752 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>model://fivedofarmzup_description/meshes/Standard_Servo__1501MG__v2_5.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Blue</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <self_collide>1</self_collide>
+        <gravity>1</gravity>
+        <self_collide>1</self_collide>
+        <gravity>1</gravity>
+        <self_collide>1</self_collide>
+        <gravity>1</gravity>
+        <self_collide>1</self_collide>
+        <gravity>1</gravity>
+        <self_collide>1</self_collide>
+        <gravity>1</gravity>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='Revolute 19' type='revolute'>
+        <pose relative_to='Standard_Servo__1501MG__v2_4'>0.015216 -0.035026 0.089936 0 -0 0</pose>
+        <parent>Standard_Servo__1501MG__v2_4</parent>
+        <child>Gripz_v2_1</child>
+        <axis>
+          <xyz>-0.127014 -0.174766 0.976383</xyz>
+          <limit>
+            <lower>-1.5708</lower>
+            <upper>1.5708</upper>
+            <effort>100</effort>
+            <velocity>100</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='Gripz_v2_1'>
+        <pose relative_to='Revolute 19'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0.004728 0.00382 0.016617 0 -0 0</pose>
+          <mass>0.263495</mass>
+          <inertia>
+            <ixx>5.2e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>-4e-06</ixz>
+            <iyy>5.2e-05</iyy>
+            <iyz>-6e-06</iyz>
+            <izz>8e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='Gripz_v2_1_collision'>
+          <pose>-0.011103 0.042959 -0.333688 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>model://fivedofarmzup_description/meshes/Gripz_v2_1.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.2</mu>
+                <mu2>0.2</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='Gripz_v2_1_visual'>
+          <pose>-0.011103 0.042959 -0.333688 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>model://fivedofarmzup_description/meshes/Gripz_v2_1.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Blue</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <self_collide>1</self_collide>
+        <gravity>1</gravity>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='Revolute 21' type='revolute'>
+        <pose relative_to='Gripz_v2_1'>0.027015 0.017271 0.022455 0 -0 0</pose>
+        <parent>Gripz_v2_1</parent>
+        <child>left-gripper_v3_1</child>
+        <axis>
+          <xyz>0.574019 0.789827 0.216045</xyz>
+          <limit>
+            <effort>100</effort>
+            <velocity>100</velocity>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='left-gripper_v3_1'>
+        <pose relative_to='Revolute 21'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0.035149 -0.046275 0.034011 0 -0 0</pose>
+          <mass>0.024857</mass>
+          <inertia>
+            <ixx>3.2e-05</ixx>
+            <ixy>8e-06</ixy>
+            <ixz>-9e-06</ixz>
+            <iyy>2.9e-05</iyy>
+            <iyz>1.3e-05</iyz>
+            <izz>2e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='left-gripper_v3_1_collision'>
+          <pose>-0.038118 0.025688 -0.356143 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>model://fivedofarmzup_description/meshes/left-gripper_v3_1.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.2</mu>
+                <mu2>0.2</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='left-gripper_v3_1_visual'>
+          <pose>-0.038118 0.025688 -0.356143 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>model://fivedofarmzup_description/meshes/left-gripper_v3_1.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Blue</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <self_collide>1</self_collide>
+        <gravity>1</gravity>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='Revolute 22' type='revolute'>
+        <pose relative_to='Gripz_v2_1'>0.008043 0.031053 0.022479 0 -0 0</pose>
+        <parent>Gripz_v2_1</parent>
+        <child>right-gripper_v2_1</child>
+        <axis>
+          <xyz>0.574019 0.789827 0.216045</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='right-gripper_v2_1'>
+        <pose relative_to='Revolute 22'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>-0.059712 0.028651 0.012133 0 -0 0</pose>
+          <mass>0.024857</mass>
+          <inertia>
+            <ixx>1.8e-05</ixx>
+            <ixy>1.1e-05</ixy>
+            <ixz>1.2e-05</ixz>
+            <iyy>3.3e-05</iyy>
+            <iyz>-6e-06</iyz>
+            <izz>3e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='right-gripper_v2_1_collision'>
+          <pose>-0.019146 0.011906 -0.356167 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>model://fivedofarmzup_description/meshes/right-gripper_v2_1.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.2</mu>
+                <mu2>0.2</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='right-gripper_v2_1_visual'>
+          <pose>-0.019146 0.011906 -0.356167 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>model://fivedofarmzup_description/meshes/right-gripper_v2_1.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Blue</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <self_collide>1</self_collide>
+        <gravity>1</gravity>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0 0 0 0 -0 0</pose>
+    </model>
+    <state world_name='default'>
+      <sim_time>10 185000000</sim_time>
+      <real_time>55 562880672</real_time>
+      <wall_time>1715237538 192339221</wall_time>
+      <iterations>10185</iterations>
+      <model name='ground_plane'>
+        <pose>0 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='robotic_arm'>
+        <pose>-0.128824 0.134412 0.007582 -0.024266 0.087602 -0.183346</pose>
+        <scale>1 1 1</scale>
+        <link name='Gripz_v2_1'>
+          <pose>-0.094073 0.10795 0.215922 -0.111816 0.177072 1.2237</pose>
+          <velocity>-0.347785 -0.084186 -0.001347 -0.207755 0.3099 1.10441</velocity>
+          <acceleration>47.5065 -449.627 417.924 0.15141 -0.590182 2.59653</acceleration>
+          <wrench>12.5177 -118.475 110.121 0 -0 0</wrench>
+        </link>
+        <link name='Servo_Bracket_-_U_Shaped_Defaut_v1_2'>
+          <pose>-0.098817 0.104734 0.080957 0.043878 0.061986 1.09227</pose>
+          <velocity>-0.59157 -0.336121 -0.33356 0.256117 0.494833 -1.4795</velocity>
+          <acceleration>-93.1205 344.963 -348.037 1.63964 0.930415 0.26039</acceleration>
+          <wrench>-26.3401 97.5761 -98.4458 0 -0 0</wrench>
+        </link>
+        <link name='Servo_Bracket_-_U_Shaped_bis_Defaut_v1_1'>
+          <pose>-0.081727 0.123793 0.095403 1.25366 -0.543091 0.649911</pose>
+          <velocity>-1.08349 0.178904 -0.413563 -3.08078 0.22701 3.03173</velocity>
+          <acceleration>-135.158 276.486 -538.534 1.86623 -1.06821 -2.27964</acceleration>
+          <wrench>-14.8738 30.4267 -59.2645 0 -0 0</wrench>
+        </link>
+        <link name='Standard_Servo__1501MG__v2_3'>
+          <pose>-0.044588 0.052129 0.122531 -1.89284 0.671348 0.268533</pose>
+          <velocity>2.12128 2.00522 0.025658 3.09804 1.51038 1.42421</velocity>
+          <acceleration>-64.4414 428.468 -82.8598 2.9837 0.962858 1.71897</acceleration>
+          <wrench>-22.3543 148.633 -28.7435 0 -0 0</wrench>
+        </link>
+        <link name='Standard_Servo__1501MG__v2_4'>
+          <pose>-0.130411 0.09064 0.126865 -0.118534 0.185631 1.08709</pose>
+          <velocity>0.421647 -1.86583 0.045007 -1.56693 0.281841 1.33576</velocity>
+          <acceleration>45.4435 135.817 361.029 1.08239 0.234068 -0.340953</acceleration>
+          <wrench>26.5567 79.37 210.981 0 -0 0</wrench>
+        </link>
+        <link name='base_link'>
+          <pose>-0.128824 0.134412 0.007582 -0.024266 0.087602 -0.183346</pose>
+          <velocity>-1.15876 0.333321 0.218463 -2.19215 -0.327568 -0.886576</velocity>
+          <acceleration>53.6681 -522.102 -388.563 -0.897838 1.39646 1.44214</acceleration>
+          <wrench>22.6135 -219.992 -163.725 0 -0 0</wrench>
+        </link>
+        <link name='left-gripper_v3_1'>
+          <pose>-0.10181 0.143334 0.231221 0.467087 0.734282 1.51238</pose>
+          <velocity>-2.10757 -0.411708 -0.00771 1.01798 -1.50621 1.1264</velocity>
+          <acceleration>-151.846 -589.553 219.547 -1.42147 0.628375 -0.00465</acceleration>
+          <wrench>-3.77443 -14.6545 5.45727 0 -0 0</wrench>
+        </link>
+        <link name='right-gripper_v2_1'>
+          <pose>-0.122214 0.129775 0.233121 -0.390226 -0.213779 1.21805</pose>
+          <velocity>-1.54259 -1.54429 -0.01013 -0.646295 0.682482 0.953637</velocity>
+          <acceleration>227.489 -116.031 138.518 2.85826 0.028868 -2.63411</acceleration>
+          <wrench>5.65469 -2.88418 3.44315 0 -0 0</wrench>
+        </link>
+      </model>
+      <light name='sun'>
+        <pose>0 0 10 0 -0 0</pose>
+      </light>
+    </state>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose>0.650928 -0.58681 0.360063 0 0.275643 2.35619</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+  </world>
+</sdf>

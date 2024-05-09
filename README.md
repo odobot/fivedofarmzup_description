@@ -71,6 +71,11 @@ third terminal
   ros2 run joint_state_publisher_gui joint_state_publisher_gui
  ```
 
+## 🎥 Gazebo
+To launch your robot arm in gazebo, run:
+ ```console
+  ros2 launch fivedofarmzup_description robot_gazebo.launch.py 
+ ```
 ## 🎥 All in one
 To launch rviz2, joint_state_publisher_gui and the robot all at once use the command:
  ```console
